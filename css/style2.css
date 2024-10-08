@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+}
+
+.responsive-nav {
+    background-color: #0ee63d;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    display: flex;
+}
+
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#menu li {
+    margin-right: 20px;
+    padding: 8px 5px;
+    border-radius: 5px;
+}
+
+#menu li:hover {
+    background-color: #069825;
+}
+
+#menu a {
+    text-decoration: none;
+    padding: 10px;
+    color: #fff;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show the toggle button */
+    }
+    .responsive-nav {
+        background-color: white;
+        align-items: center;
+        padding: 20px;
+        position: relative;
+        display: flex;
+    }
+
+    #menu {
+        display: none; /* Initially hide the menu */
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        background-color: #0ee63d;
+        width: 100%;
+    }
+
+    #menu.show {
+        display: flex; /* Show the menu when the .show class is added */
+    }
+
+    #menu a {
+        color: black; /* Change link color in mobile view */
+    }
+}
